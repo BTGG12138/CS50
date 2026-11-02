@@ -1,0 +1,26 @@
+# 编译产物
+*.exe
+*.obj
+*.o
+*.so
+*.a
+*.out
+Debug/
+Release/
+build/
+cmake-build-*/
+
+# 日志
+*.log
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 补充（ROS2、开发常用）
+install/
+log/
+*.db
+.DS_Store
