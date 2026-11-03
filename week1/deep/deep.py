@@ -1,0 +1,3 @@
+#In deep.py, implement a program that prompts the user for the answer to the Great Question of Life, the Universe and Everything, outputting Yes if the user inputs 42 or (case-insensitively) forty-two or forty two. Otherwise output No.
+#在 deep.py 中，实现一个程序，提示用户回答生命、宇宙与万物的伟大问题，如果用户输入 42 ，则输出 Yes ，或者（不区分大小写） forty-two 或 forty two 。否则输出 No 。
+print("Yes") if input("输入输入 ").lower() in ("42","forty-two","forty two") else print("No")
