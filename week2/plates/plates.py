@@ -23,11 +23,11 @@ def is_valid(s):
     for first_num in s:
         #三元表达式内只能赋值
         if first_num.isdigit():
-            if first_num=="0":
-                return False
-            letter,nums=s.split(first_num)
-            if nums.isalpha():return False
-    for first_letter in s:
-        if not (s[0].isalpha() or s[1].isalpha()):return False
+            if first_num=="0":return False
+            letter,nums=s.split(first_num,1)
+            for num in nums:
+                if num.isalpha():return False
+            break
+    if not (s[0].isalpha() and s[1].isalpha()):return False
     return True
 main()
