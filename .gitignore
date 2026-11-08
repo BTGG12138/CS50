@@ -41,6 +41,8 @@ install/
 log/
 *.db
 .DS_Store
+*.jpg
+*.png
 
 # =========================
 # 编辑器/IDE 配置文件
