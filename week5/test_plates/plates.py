@@ -24,6 +24,7 @@ def is_valid(s):
             for num in nums:
                 if num.isalpha():return False
             break
-    if not (s[0].isalpha() and s[1].isalpha()):return False
+    if not (s[0].isalpha()):return False
     return True
-main()
+if __name__=="__main":
+    main()
