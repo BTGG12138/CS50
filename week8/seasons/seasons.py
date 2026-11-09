@@ -11,9 +11,24 @@ dt = datetime.fromisoformat("2000-01-01T09:30:00")   # ISO 标准
 today = date.today()                       # 今天
 now   = datetime.now()                     # 当前本地时间
 utc   = datetime.utcnow()                  # 当前 UTC(不推荐，用 utcnow 的替代见下）
-"""
-from datetime import date
-def main():
 
-if __name__ == "__main__":
-    main()
+# 使用 inflect 转换数字
+p = inflect.engine()
+# andword="" 参数至关重要，它会去掉英文数字中的 "and" (例如: one hundred twenty)
+words = p.number_to_words(total_minutes, andword="")
+"""
+"""
+cd /home/btgg/Desktop/CS50/week8/seasons && python3 -m venv .venv && source .venv/bin/activate && python -m pip install num2words
+cd /home/btgg/Desktop/CS50/week8/seasons && rm -rf venv && python3 -m venv venv && source venv/bin/activate && pip install --upgrade pip && pip install inflect
+"""
+
+from datetime import date
+import inflect
+def main():print(convert(input("Date of Birth: ")))
+def convert(s):
+    try:
+        birth=date.fromisoformat(s)
+        now=date(2000,1,1)
+        return f"{inflect.engine().number_to_words((now-birth).days*24*60,andword="").capitalize()} minutes"
+    except ValueError:return "Invalid date"
+if __name__ == "__main__":main()
